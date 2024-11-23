@@ -1,17 +1,21 @@
-const express = require('express');
+import express from 'express';
+import bodyParser from 'body-parser';
+import bibitRouter from './routes/bibit.js';
+import pupukRouter from './routes/pupuk.js';
+
 const app = express();
-const todoRoutes = require('./todo.js');
-const port = 3000;
+const PORT = 8000;
 
-app.use(express.json());
+// Middleware untuk parsing JSON body
+app.use(bodyParser.json());
 
-app.use('/todos', todoRoutes);
-app.set('view engine', 'ejs');
-app.get('/', (req, res) => {
-    res.render('index');
+// Menggunakan route bibit
+app.use('/bibit', bibitRouter);
+
+// Menggunakan route pupuk
+app.use('/pupuk', pupukRouter);
+
+// Menjalankan server
+app.listen(port, () => {
+    console.log(`Server berjalan di http://localhost:${port}`);
 });
-
-app.listen(port, () => 
-    console.log(
-        `Server berjalan di port : http://localhost:${port}`)
-);
