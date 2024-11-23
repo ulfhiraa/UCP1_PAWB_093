@@ -16,19 +16,19 @@ const pupuk = [
         jumlah: "1kg"
     },
     {
-        id: "2",
+        id: "3",
         namaPupuk: "Pupuk Kandang",
         jenisPupuk: "Cair",
         jumlah: "4kg"
     },
     {
-        id: "2",
+        id: "4",
         namaPupuk: "Pupuk Briket",
         jenisPupuk: "Padat",
         jumlah: "3kg"
     },
     {
-        id: "2",
+        id: "5",
         namaPupuk: "Pupuk NPK Cair",
         jenisPupuk: "Cair",
         jumlah: "1kg"
