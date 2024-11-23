@@ -42,10 +42,10 @@ router.put('/:id', (req, res) => {
     const pupuk = pupuks.find(p => p.id === req.params.id);
     if (!pupuk) return res.status(404).json({ message: 'Pupuk tidak ditemukan' });
 
-    const { namaPupuk, jenisPupuk, jumlah } = req.body;
+    const { namaPupuk, jenisPupuk, jumlahPupuk } = req.body;
     pupuk.namaPupuk = namaPupuk || pupuk.namaPupuk;
     pupuk.jenisPupuk = jenisPupuk || pupuk.jenisPupuk;
-    pupuk.jumlah = jumlah || pupuk.jumlah;
+    pupuk.jumlahPupuk = jumlahPupuk || pupuk.jumlahPupuk;
 
     res.status(200).json({
         message: `Pupuk dengan ID ${pupuk.id} telah diperbarui`,
