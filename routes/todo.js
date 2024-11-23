@@ -6,3 +6,14 @@ const router = express.Router();
 router.get('/', (req, res) => {
     res.json(todos);
 });
+
+// Endpoint untuk menambah tugas baru
+router.post('/', (req, res) => {
+    const newPupuk = {
+        id: todos.length + 1,
+        task: req.body.task,
+        completed: false
+    };
+    todos.push(newTodo);
+    res.status(201).json(newTodo);
+});
