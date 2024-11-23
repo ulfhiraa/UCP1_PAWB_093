@@ -33,4 +33,8 @@ const pupuk = [
         jenisPupuk: "Cair",
         jumlah: "1kg"
     }
-]
+];
+router.get("/", (req, res) => {
+    res.send(pupuk); // menampilkan data
+});
+export default router;
