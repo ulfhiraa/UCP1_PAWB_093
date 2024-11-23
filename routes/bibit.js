@@ -2,7 +2,7 @@ import express, { Route } from "express";
 
 const router = express.Router();
 
-const pupuk = [
+const bibit = [
     {
         id: "1",
         namaBibit: "Bibit Cabai",
@@ -35,6 +35,6 @@ const pupuk = [
     }
 ];
 router.get("/", (req, res) => {
-    res.send(pupuk); // menampilkan data
+    res.send(bibit); // menampilkan data
 });
 export default router;
